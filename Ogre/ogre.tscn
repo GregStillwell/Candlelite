@@ -1,0 +1,155 @@
+[gd_scene load_steps=25 format=3 uid="uid://qevsmkmtcmen"]
+
+[ext_resource type="Script" path="res://ogre.gd" id="1_bop40"]
+[ext_resource type="Texture2D" uid="uid://c28pmd0to05by" path="res://Terrible Knight Files/VFX/Sprites/EnemyDeath/enemy-death1.png" id="1_md4p0"]
+[ext_resource type="Texture2D" uid="uid://dmktsrq7fsusd" path="res://Terrible Knight Files/Sprites/Ogre/Idle/ogre-idle1.png" id="1_wrbv1"]
+[ext_resource type="Texture2D" uid="uid://b8oog6n8vp641" path="res://Terrible Knight Files/Sprites/Ogre/Idle/ogre-idle2.png" id="2_s4mob"]
+[ext_resource type="Texture2D" uid="uid://b1i7g47biaxfc" path="res://Terrible Knight Files/VFX/Sprites/EnemyDeath/enemy-death2.png" id="2_ypgu2"]
+[ext_resource type="Texture2D" uid="uid://cb3ak80ox4atu" path="res://Terrible Knight Files/Sprites/Ogre/Idle/ogre-idle3.png" id="3_ny0ol"]
+[ext_resource type="Texture2D" uid="uid://bo7y8ql2owvr3" path="res://Terrible Knight Files/VFX/Sprites/EnemyDeath/enemy-death3.png" id="3_pivrt"]
+[ext_resource type="Texture2D" uid="uid://7ip2gi6hjlrv" path="res://Terrible Knight Files/VFX/Sprites/EnemyDeath/enemy-death4.png" id="4_no0tt"]
+[ext_resource type="Texture2D" uid="uid://c0p5wbc2rg45l" path="res://Terrible Knight Files/Sprites/Ogre/Idle/ogre-idle4.png" id="4_ul3ox"]
+[ext_resource type="Texture2D" uid="uid://c05pb101vsuvm" path="res://Terrible Knight Files/Sprites/Ogre/walk/ogre-walk1.png" id="5_l7ro3"]
+[ext_resource type="Texture2D" uid="uid://2e301ufa4ulk" path="res://Terrible Knight Files/VFX/Sprites/EnemyDeath/enemy-death5.png" id="5_tx7mj"]
+[ext_resource type="Texture2D" uid="uid://cbnwpa3uuxjwh" path="res://Terrible Knight Files/VFX/Sprites/EnemyDeath/enemy-death6.png" id="6_jsvk4"]
+[ext_resource type="Texture2D" uid="uid://by3riqrsn5eru" path="res://Terrible Knight Files/Sprites/Ogre/walk/ogre-walk2.png" id="6_vwtaf"]
+[ext_resource type="Texture2D" uid="uid://dn5ojmbgpvi0j" path="res://Terrible Knight Files/Sprites/Ogre/walk/ogre-walk3.png" id="7_t4bur"]
+[ext_resource type="Texture2D" uid="uid://dgfa7hc0mirbm" path="res://Terrible Knight Files/VFX/Sprites/EnemyDeath/enemy-death7.png" id="7_xjao0"]
+[ext_resource type="Texture2D" uid="uid://dao70dioxrf6h" path="res://Terrible Knight Files/VFX/Sprites/EnemyDeath/enemy-death8.png" id="8_stvwt"]
+[ext_resource type="Texture2D" uid="uid://botph3ou5p7k3" path="res://Terrible Knight Files/Sprites/Ogre/walk/ogre-walk4.png" id="8_wbuft"]
+[ext_resource type="Texture2D" uid="uid://debnx0idn5vph" path="res://Terrible Knight Files/Sprites/Ogre/walk/ogre-walk5.png" id="9_vy6ay"]
+[ext_resource type="Texture2D" uid="uid://eab1c2a1a3be" path="res://Terrible Knight Files/Sprites/Ogre/walk/ogre-walk6.png" id="10_w8hoh"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_scb56"]
+radius = 24.0
+height = 48.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tryvg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_md4p0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ypgu2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_pivrt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_no0tt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_tx7mj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_jsvk4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xjao0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_stvwt")
+}],
+"loop": false,
+"name": &"Death",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_wrbv1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_s4mob")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ny0ol")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ul3ox")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_wrbv1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_wrbv1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_wrbv1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_wrbv1")
+}],
+"loop": false,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_l7ro3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_vwtaf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_t4bur")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_wbuft")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_vy6ay")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_w8hoh")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_to6wj"]
+radius = 208.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cdwi2"]
+size = Vector2(32, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fxqmw"]
+size = Vector2(52, 26)
+
+[node name="Ogre" type="CharacterBody2D"]
+script = ExtResource("1_bop40")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_scb56")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -16)
+sprite_frames = SubResource("SpriteFrames_tryvg")
+animation = &"Idle"
+
+[node name="PlayerDetection" type="Area2D" parent="."]
+position = Vector2(-40, -16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetection"]
+position = Vector2(40, 16)
+shape = SubResource("CircleShape2D_to6wj")
+
+[node name="PlayerDeath" type="Area2D" parent="."]
+position = Vector2(-40, -16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDeath"]
+position = Vector2(40, 0)
+shape = SubResource("RectangleShape2D_cdwi2")
+
+[node name="PlayerCollision" type="Area2D" parent="."]
+position = Vector2(-40, -16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerCollision"]
+position = Vector2(42, 27)
+shape = SubResource("RectangleShape2D_fxqmw")
+
+[connection signal="body_entered" from="PlayerDetection" to="." method="_on_player_detection_body_entered"]
+[connection signal="body_exited" from="PlayerDetection" to="." method="_on_player_detection_body_exited"]
+[connection signal="body_entered" from="PlayerDeath" to="." method="_on_player_death_body_entered"]
+[connection signal="body_entered" from="PlayerCollision" to="." method="_on_player_collision_body_entered"]

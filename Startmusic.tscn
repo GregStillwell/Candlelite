@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://ykyp5d2ynlhu"]
+
+[ext_resource type="AudioStream" uid="uid://btdfu3jdc7jre" path="res://Audio/Music/music_biiansu_tria_biiansu_longs_cinematic_drones_textures_024.mp3" id="1_xad7i"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_xad7i")
+autoplay = true

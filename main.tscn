@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://b8ywbm0ylqmvb"]
+
+[ext_resource type="Script" path="res://Main.gd" id="1_xrpas"]
+[ext_resource type="PackedScene" uid="uid://jm5gl2w3u5wu" path="res://Bg.tscn" id="2_nlmh0"]
+[ext_resource type="Script" path="res://Play.gd" id="2_x4nlf"]
+[ext_resource type="AudioStream" uid="uid://btdfu3jdc7jre" path="res://Audio/Music/music_biiansu_tria_biiansu_longs_cinematic_drones_textures_024.mp3" id="3_ojy3n"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_xrpas")
+
+[node name="Play" type="Button" parent="."]
+offset_left = 414.0
+offset_top = 118.0
+offset_right = 742.0
+offset_bottom = 267.0
+text = "Play"
+script = ExtResource("2_x4nlf")
+
+[node name="Quit" type="Button" parent="."]
+offset_left = 418.0
+offset_top = 369.0
+offset_right = 745.0
+offset_bottom = 523.0
+text = "Quit"
+
+[node name="BG" parent="." instance=ExtResource("2_nlmh0")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_ojy3n")
+autoplay = true
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

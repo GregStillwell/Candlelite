@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cb14xmqg74nki"]
+
+[ext_resource type="PackedScene" uid="uid://cq5ymyww1p1t3" path="res://Levels/level1.tscn" id="1_fl30e"]
+
+[node name="Game" type="Node"]
+process_mode = 3
+
+[node name="Level1" parent="." instance=ExtResource("1_fl30e")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
